@@ -24,7 +24,34 @@
   margin-bottom: 20px;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+    .experience-box {
+        /* Zmniejszamy box i jego czcionkę */
+        padding: 10px 15px !important;
+        min-width: auto !important;
+        width: fit-content !important;
+        
+        /* Przesuwamy go w róg lub na dół obrazka, by nie zasłaniał środka */
+        bottom: 20px !important;
+        right: 10px !important;
+        left: auto !important;
+        top: auto !important;
 
+        /* Subtelniejszy wygląd */
+        background: rgba(29, 39, 57, 0.9) !important; /* Ciemnoniebieski z lekką przezroczystością */
+        border-bottom: 2px solid #ff0000 !important;
+    }
+
+    .experience-box h3 {
+        font-size: 1.2rem !important; /* Rozmiar liczby "20+" */
+        margin: 0 !important;
+    }
+
+    .experience-box p {
+        font-size: 0.7rem !important; /* Rozmiar tekstu pod liczbą */
+        line-height: 1 !important;
+    }
+}
 .about-title {
   color: #1d2739;
   font-size: 2.5rem;
@@ -53,6 +80,8 @@
   color: #1d2739;
   line-height: 1.6;
 }
+
+
 
 /* Niebieski znacznik przed listą */
 .about-features li::before {
@@ -337,10 +366,7 @@
   animation: scroll infinite linear;
 }
 
-/* Pauza po najechaniu, aby klient mógł kliknąć w zdjęcie */
-.slider-track:hover {
-  animation-play-state: paused;
-}
+
 
 @keyframes scroll {
   0% { transform: translateX(0); }
